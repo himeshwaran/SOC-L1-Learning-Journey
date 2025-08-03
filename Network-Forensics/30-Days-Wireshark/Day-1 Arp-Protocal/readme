@@ -1,0 +1,33 @@
+APR PROTOCAL  (Layer2 DATA LINK )
+
+Purpose:
+	l. ARP is used to find the MAC address of a device to send the data in the LAN Network .
+	
+Work:
+	l . When it send the data it first check its ARP cache to find the mac add for the ip address . Its not found it boardcast the request and get the response from the respective device and update its ARP cache
+
+Vulnerability:
+	l. ARP is vulnerable to attacks like ARP Spoofing  where attackers can manipulate the ARP cache to intercept or redirect
+
+ How ARP Works (Step-by-Step)
+	1. Host A wants to send to IP 192.168.1.5
+	2. It checks ARP table
+	3. If MAC not found → sends ARP Request (broadcast)
+	4. Host B (target) replies with MAC → ARP Reply
+	5. Host A stores this mapping in cache
+
+Helpful Filters
+  1.arp.opcode == 1 → ARP Request
+  2.arp.opcode == 2 → ARP Reply
+  3.eth.src → Sender MAC
+  4.eth.dst → Destination MAC
+
+
+Before Performing the attach 
+
+
+
+
+
+
+
