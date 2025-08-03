@@ -12,7 +12,7 @@ Welcome! This repository documents my hands-on journey toward becoming a skilled
 ## 📂 Contents:
 - 🧪 Detection Reports & Correlation Labs
 - 🧠 Custom Sigma Rules , Yara Rules
-- 🛠 SIEM Queries (Splunk, Wazuh)
+- 🛠 SIEM  (Splunk, Wazuh)
 - 📡 30 Days of Wireshark (PCAP Analysis)
 - 🧠 Memory and Disk Forensics (Volatility, FTK Imager)
 - 🎓 Learning Notes, Resources, Resume
