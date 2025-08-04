@@ -1,0 +1,43 @@
+✅ Day 2 of My Cybersecurity Learning Challenge – ICMP Protocol 🔍
+Today I dove into ICMP (Internet Control Message Protocol) — a core part of the IP suite that plays a crucial role in network diagnostics and error reporting.
+
+Here’s what I learned and practiced:
+
+📌 What is ICMP?
+
+ICMP works at Layer 3 (Network Layer) and is used for:
+
+Error reporting (e.g., "Destination Unreachable", "TTL Expired")
+
+Host availability checks (ping)
+
+Network diagnostics (traceroute)
+
+🧠 Key Concepts I Explored
+✅ ICMP is like the messenger for IP — it reports problems, but doesn’t carry actual data
+📡 Common message types:
+
+Echo Request (Type 8) & Echo Reply (Type 0)
+
+Destination Unreachable (Type 3)
+
+Time Exceeded (Type 11)
+🧪 Tools like Wireshark can filter these using:
+
+icmp.type == 8  # Echo request  
+icmp.type == 0  # Echo reply  
+icmp.type == 3  # Destination unreachable  
+icmp.type == 11 # TTL expired
+
+🎯 SOC Analyst Angle – Why This Matters
+
+ICMP can be abused for scanning, tunneling, or covert communication
+
+TTL Analysis can help identify OS fingerprinting and detect spoofing
+
+e.g., TTL = 60 in a Windows-only network? Suspicious 👀
+
+Nmap defaults to TTL = 64, but attackers can change this with --ttl flag
+
+🧩 Pro Tip I Learned:
+ICMP doesn’t encrypt anything — but payloads might look encrypted when attackers use it for covert exfiltration or tunneling 🔐
