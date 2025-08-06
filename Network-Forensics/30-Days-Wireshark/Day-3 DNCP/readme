@@ -1,0 +1,29 @@
+# 📡 Deep Dive into DHCP – Dynamic Host Configuration Protocol
+
+## 🔍 What is DHCP?
+
+**DHCP (Dynamic Host Configuration Protocol)** is a network management protocol used to automatically assign IP addresses and other 
+network configuration parameters to devices on a network. It eliminates the need for manual IP configuration.
+
+---
+
+## 📶 How DHCP Works – Step-by-Step
+
+DHCP follows a four-step process known as **DORA**:
+
+| Step | Message        | Description |
+|------|----------------|-------------|
+| 1️⃣   | DHCP Discover  | The client broadcasts a message to locate available DHCP servers. |
+| 2️⃣   | DHCP Offer     | One or more DHCP servers respond with an offer containing an IP address and configuration. |
+| 3️⃣   | DHCP Request   | The client requests the IP address offered by one of the servers. |
+| 4️⃣   | DHCP ACK       | The server acknowledges and assigns the IP to the client. |
+
+---
+
+## 🧪 Technical Packet Flow
+
+
+Client IP: 0.0.0.0 → Broadcast → DHCP Discover
+DHCP Server → DHCP Offer (IP, lease time, subnet, gateway, DNS)
+Client → DHCP Request (wants offered IP)
+DHCP Server → DHCP ACK (IP assigned)
